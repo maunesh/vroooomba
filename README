@@ -1,0 +1,6 @@
+VROOMBA 
+(Zach Duvall, Jake Cohen, Tito Rahman, Ryan Gunapala, Charitha Sathkumara, Maunesh Ahir)
+
+The goal of the project is an NXT brick which is capable of roaming and traversing (or cleaning) all of the space in a perimeter.  It doesn't know how large the perimeter is, so it has to keep track of visited, intraversable and unknown tiles in the room.  The crux of the algorithm is to spiral as much as it can in one area and whenever it doesn't have complete information about a certain tile's neighbors, it pushes that tile onto a stack.  Once the spiral is complete, it pops the next tile on the stack and continues as it did before and cycles like this until the stack is empty.
+
+In order to build, it needs to be able to turn in place.  Two motors are placed in ports B (for left) and C (for right).  An ultrasonic sensor is placed in port 4.  The code can be built in Eclipse using the NXJ plugin and uploaded via bluetooth.
